@@ -1,0 +1,92 @@
+---
+#layout: compress
+---
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+{% include default/default_helena_20G_var_LINK.html %}
+
+<!doctype html>
+<html lang="nl">
+
+  <head>
+    <meta charset="utf-8">
+    <!--
+    <meta http-equiv="refresh" content="5">    
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.website_title %}{{ page.website_title }}{% else %}{{ loc_website_title }}{% endif %}</title>
+
+    <meta name="author"      content="content: {{ loc_company_name_bedrijf }},website-kode: {{ loc_company_name_cento }}">
+    <meta name="generator"   content="Jekyll en Art-Template">
+    <meta name="keywords"    content="{{ loc_meta_keywords_bedrijf }},{{ loc_meta_keywords_cento }}" lang="nl">
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ loc_meta_description }}{% endif %}">
+
+    <!-- Komt uit BS5 -->
+    <link rel="icon" href="{{ loc_url_rel }}{{ loc_path_icons }}favicon.ico">
+
+    {% include default/loc_head_defa_10.html %}    
+
+    {% if loc_use_manifest %}
+      <link rel="manifest" href="manifest.json">
+    {% endif %}    
+
+    {% comment %}<!-- Zie robots.txt bij techniek-->{% endcomment %}
+    <meta name="robots" content="{{ loc_meta_robots }}"/>
+  </head>
+
+  <body>      
+    <a name="blok_link_top_page"></a>
+
+    <noscript>
+      <div class="block_noscript_61">
+        <p>
+          Om deze site optimaal te gebruiken is het noodzakelijk om Javascript aan te zetten.<br>
+          <a href="https://www.enable-javascript.com/nl/" rel="nofollow" target="_blank">
+          Hier vind u instructies over hoe u Javascript activeert in uw web browser.</a>
+        </p>
+      </div>
+    </noscript>
+
+    <div class="block_oudeIE_62"></div> 
+    <script>
+      function isIE1011() {
+          // IE 10 and IE 11
+          return /Trident\/|MSIE/.test(window.navigator.userAgent);
+      }
+
+      var showBrowserAlert = (function () {
+          if (document.querySelector('.block_oudeIE_62')) {
+              let d = document.getElementsByClassName('block_oudeIE_62');
+
+              is_IE1011 = isIE1011();
+
+              if (is_IE1011) {
+                  d[0].innerHTML = '<p>Deze site komt niet meer tot zijn recht met Internet Explorer.<br>Bezoek a.u.b. <a href="http://browsehappy.com/" rel="nofollow" target="_blank">kies een andere browser</a> voor een betere beleving.</p>';
+                  d[0].style.display = 'block';
+              }
+          }
+      });
+
+      document.addEventListener('DOMContentLoaded', showBrowserAlert);
+    </script>
+
+      <!-- =================< START YIELD >======================================= -->
+    {{ content }}
+    <!-- =================< EINDE YIELD >======================================= -->
+
+    {% include default/loc_foot_defa_10.html %}
+
+
+  </body>
+
+</html>
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}

@@ -1,0 +1,16 @@
+---
+---
+
+{
+  "blocken": [
+    {% for post in site.tags.block_01 %}
+      { 
+        "kop":          "{{ post.kop }}",
+        "foto_bestand": "{{ post.foto_bestand }}",
+        "foto_alt":     "{{ post.foto_alt }}",
+        "url":          "{{ post.url }}",
+        "tekst":        "{{ post.content | replace: '"', "'" | strip_newlines }}"    
+      } {% unless forloop.last %},{% endunless%}
+    {% endfor %}
+  ]
+}

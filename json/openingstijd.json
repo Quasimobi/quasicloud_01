@@ -1,0 +1,12 @@
+---
+---
+
+{
+  "openingstijd": [
+    {% for post in site.tags.openingstijd %}
+      { 
+        "vakantie_tijd": "{{ post.vakantie_tijd }}"
+      } {% unless forloop.last %},{% endunless%}
+    {% endfor %}
+  ]
+}

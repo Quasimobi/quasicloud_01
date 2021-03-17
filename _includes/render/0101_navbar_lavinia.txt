@@ -1,0 +1,40 @@
+
+    <!-- render_navbar_lavinia_01G 0.1.0 -->
+    <nav id="nav-scrollspy" class="navbar navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar_lavinia_01G">
+      <div class="container">
+        
+    <a class="navbar-brand js-scroll-trigger" href="index.html">
+    Glint Mobi websites</a>
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            
+    <!-- snip_navbar_lavinia_01G_links 0.1.0 -->
+    
+      
+        <li class="nav-item active">
+      
+          <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+        </li>
+    
+      
+        <li class="nav-item">
+      
+          <a class="nav-link js-scroll-trigger" href="carousel.html">Carousel</a>
+        </li>
+    
+      
+        <li class="nav-item">
+      
+          <a class="nav-link js-scroll-trigger" href="blocken.html">Blocken</a>
+        </li>
+    
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 

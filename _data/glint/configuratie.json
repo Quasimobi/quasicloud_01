@@ -1,0 +1,20 @@
+{
+  "glint_site_testen":              false,
+  "glint_url_abs":                  "http://127.0.0.1:4000/",
+  "glint_url_rel":                  "",
+  "glint_use_art":                  false,
+  "glint_use_manifest":             false,
+  "glint_use_service_worker":       false,
+  "glint_meta_robots":              "INDEX, FOLLOW",
+  "glint_show_docu":                false,  
+  "glint_path_bedrijf_media":       "assets/images/",
+  "glint_path_bedrijf_media_upload": "assets/images/upload",      
+  "glint_path_bedrijf_media_post":  "assets/images/",
+  "glint_path_icons":               "assets/icons/",
+  "glint_path_json":                "json/",
+  "glint_path_css":                 "assets/css/",
+  "glint_path_js_glint":            "js_glint/",
+  "glint_path_js_vendor":           "assets/js_vendor/",
+  "glint_github_upload_yes":        true,
+  "glint_github_url_abs":           "https://quasimobi.github.io/"
+}

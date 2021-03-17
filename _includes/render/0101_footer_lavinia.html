@@ -1,0 +1,39 @@
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+{% raw %}
+<script>
+  let data_block_adres_0101 = {
+    "straat": json_bedrijf.adres_straat_bedrijf,
+    "huisnr": json_bedrijf.adres_huisnr_bedrijf,
+    "postcode": json_bedrijf.adres_postcode_bedrijf,
+    "plaats": json_bedrijf.adres_plaats_bedrijf
+  }
+  let data_block_contact_0101 = {
+    "email_link": json_bedrijf.email_link_bedrijf,
+    "email_tekst": json_bedrijf.email_tekst_bedrijf,
+    "telefoon": json_bedrijf.adres_telefoon_bedrijf
+  }
+
+  let loc_url_json_02 = get_github_url_01();
+  fetch(loc_url_json_02+"openingstijd.json")
+  // Handle success
+  .then(response => response.json())  // convert to json
+  .then((data) => {    
+    let json_openings = loc_block_lavinia_footer_11G_openings_get(data.openingstijd[0].vakantie_tijd);
+    snip_footer_33 = render_block_lavinia_openings_11G2(json_openings);
+    let snip_footer_31 = render_block_lavinia_adres_11G2(data_block_adres_0101);
+    let snip_footer_32 = render_block_lavinia_contact_11G2(data_block_contact_0101);
+    let render_footer_11 = render_footer_lavinia_11G(snip_footer_31, snip_footer_32, snip_footer_33);
+    render_template_01("id_footer_01", render_footer_11);
+  })
+  .catch(error => log_error_01('Lukt niet om openingstijd.json op te halen', error));     
+</script>
+{% endraw %}
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}

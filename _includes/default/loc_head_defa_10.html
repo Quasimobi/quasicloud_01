@@ -1,0 +1,38 @@
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+{% if loc_site_testen %}
+  <link rel="stylesheet" href="{{ loc_url_rel }}{{ loc_path_css }}glint_strap.css">
+  <link rel="stylesheet" href="{{ loc_url_rel }}{{ loc_path_css }}glint_blok.css">
+  <link rel="stylesheet" href="{{ loc_url_rel }}{{ loc_path_css }}glint_detail.css">
+{% else %}
+  <link rel="stylesheet" href="{{ loc_url_rel }}{{ loc_path_css }}glint_strap.css">
+  <link rel="stylesheet" href="{{ loc_url_rel }}{{ loc_path_css }}glint_deploy.css">
+{% endif %}
+
+<!-- FontAwesome JS
+<script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+-->
+
+<script type="text/javascript" src="{{ loc_url_rel }}{{ loc_path_js_vendor }}template-web.js"></script>
+<script>
+  template.defaults.escape = true;
+  glint_save_includes = false;      
+</script>
+
+{% if loc_site_testen %}
+{% else %}
+  <script type="text/javascript" src="{{ loc_url_rel }}{{ loc_path_js_glint }}defa_data_bs4.js"></script>
+  <script type="text/javascript" src="{{ loc_url_rel }}{{ loc_path_js_glint }}loc_data_quasicloud_01.js"></script>
+  <script type="text/javascript" src="{{ loc_url_rel }}{{ loc_path_js_glint }}loc_biblio_quasicloud_01.js"></script>
+  <script type="text/javascript" src="{{ loc_url_rel }}{{ loc_path_js_glint }}loc_biblio_quasicloud_02.js"></script>
+{% endif %}
+
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}
+

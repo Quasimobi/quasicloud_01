@@ -1,0 +1,66 @@
+---
+layout: default_helena_10G_LINK
+permalink: carousel.html
+---
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- Naam: 02_carousel.html -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+{% include default/default_helena_20G_var_lite_LINK.html %}
+{% include default/default_helena_01G_content_LINK.html %}
+
+<!-- ===================< NAVBAR >========================================== -->
+<div class="wrapper_navbar_lavinia_99_01">
+  {% include render/0102_navbar_lavinia.html %}
+</div>
+
+<!-- ==================< REFERENTIES >====================================== -->
+<section class="section_quasicloud_99_01">
+  <div class="container">
+    <div class="row">
+      <div class="col-carousel-athena-017">
+        <div class="wrapper_carousel_athena_02_01">
+          <div id="id_carousel_athena_0107">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /*
+    Afhankelijk van de waarde json_configuratie.glint_github_upload_yes
+    wordt bij true dooregeven: json_configuratie.glint_github_url_abs+json_configuratie.glint_path_json
+    OF bij false full_path_abs_json
+  */
+  let loc_url_json = get_github_url_01();
+  fetch(loc_url_json+"carousels_01.json")
+  // Handle success
+    .then(response => response.json())  // convert to json
+    .then((data) => {
+      let config_carousel_01  = {
+        "carousel_id": "carousel_github_01"
+      };      
+      var snip_items_0107       = snip_carousel_athena_51G_items_01(data.carousels, full_path_rel_bedrijf_media);
+      var snip_controls_0107    = snip_carousel_athena_51G_controls(config_carousel_01);
+      var snip_indicators_0107  = ``;
+      var render_carousel_0107  = render_carousel_athena_51G(config_carousel_01, data, snip_items_0107, snip_controls_0107, snip_indicators_0107);
+      render_template_01("id_carousel_athena_0107", render_carousel_0107);
+    })
+    .catch(error => log_error_01('Lukt niet om carousels_01.json op te halen', error)); 
+</script>
+<!-- ==================< FOOTER >=========================================== -->
+<div class="wrapper_footer_lavinia_99_01">
+  <div id="id_footer_01">
+  </div>
+</div>  
+{% include render/0101_footer_lavinia.html %}
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}

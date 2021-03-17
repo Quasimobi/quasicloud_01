@@ -1,0 +1,60 @@
+---
+layout: default_helena_10G_LINK
+permalink: blocken.html
+---
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- Naam: 03_blocken.html -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+{% include default/default_helena_20G_var_lite_LINK.html %}
+{% include default/default_helena_01G_content_LINK.html %}
+
+<!-- ===================< NAVBAR >========================================== -->
+<div class="wrapper_navbar_lavinia_99_01">
+  {% include render/0103_navbar_lavinia.html %}
+</div>
+
+<!-- ==================< TEMPLATES >======================================== -->
+<section class="section_quasicloud_99_01">
+  <div class="container">
+    <div class="wrapper_blocken_athena_03_01">
+      <div id="id_blocken_athena_0201">
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let loc_url_json = get_github_url_01();
+  fetch(loc_url_json+"blocken_01.json")
+    // Handle success
+    .then(response => response.json())  // convert to json
+    .then((data) => {    
+      var render_blocken_athena_0201  = render_blocken_athena_02G(data.blocken, full_path_rel_bedrijf_media);
+      render_template_01("id_blocken_athena_0201", render_blocken_athena_0201);
+    })
+    .catch(error => log_error_01('Lukt niet om blocken_01.json op te halen', error)); 
+</script>
+
+<!-- ==================< FOOTER >=========================================== -->
+<div class="wrapper_footer_lavinia_99_01">
+  <div id="id_footer_01">
+  </div>
+</div>  
+{% include render/0101_footer_lavinia.html %}
+
+{% comment %}
+<!-- ======================================================================= -->
+<!-- ======================================================================= -->
+{% endcomment %}
+
+
+
+
+    
+
+
+

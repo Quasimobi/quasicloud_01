@@ -33,7 +33,7 @@ permalink: blocken.html
     // Handle success
     .then(response => response.json())  // convert to json
     .then((data) => {    
-      var render_blocken_athena_0201  = render_blocken_athena_02G(data.blocken, full_path_rel_bedrijf_media);
+      var render_blocken_athena_0201  = render_blocken_athena_02G(data.blocken, "");
       render_template_01("id_blocken_athena_0201", render_blocken_athena_0201);
     })
     .catch(error => log_error_01('Lukt niet om blocken_01.json op te halen', error)); 

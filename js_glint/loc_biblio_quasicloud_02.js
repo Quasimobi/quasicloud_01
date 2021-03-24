@@ -165,7 +165,7 @@ function render_footer_lavinia_11G(snip_footer_10, snip_footer_11, snip_footer_1
   return resultRender;
 }
 /* ========================================================================== */
-function render_blocken_athena_02G(data_tpl_blocken, loc_path_bedrijf_media = json_configuratie.glint_path_bedrijf_media) {
+function render_blocken_athena_02G(data_tpl_blocken, loc_path_bedrijf_media) {
 
   const data_length = data_tpl_blocken.length;
 
@@ -203,7 +203,7 @@ function render_blocken_athena_02G(data_tpl_blocken, loc_path_bedrijf_media = js
    return renderSnip({ blocken: data_tpl_blocken, loc_path_bedrijf_media, data_length });
 }
 /* ========================================================================== */
-function snip_carousel_athena_51G_items_01(data_tpl_fotos, loc_path_bedrijf_media = json_configuratie.glint_path_bedrijf_media) {
+function snip_carousel_athena_51G_items_01(data_tpl_fotos, loc_path_bedrijf_media) {
   let snip_carousel_01 = `
     <!-- snip_carousel_athena_51G_items_01 0.1.0 -->
     <% for(var teller = 0; teller < fotos.length; teller++){ %>

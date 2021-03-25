@@ -5,7 +5,7 @@
   "carousels": [
     {% for post in site.tags.carousel_01 %}
       { 
-        "foto_bestand": "{{ post.foto_bestand }}",
+        "foto_bestand": "{{ post.foto_bestand | slice:1, post.foto_bestand.size }}",
         "foto_alt":     "{{ post.foto_alt }}",
         "foto_tekst":   "{{ post.foto_tekst }}",
         "sterren":      "{{ post.sterren }}",

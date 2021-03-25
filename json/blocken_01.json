@@ -6,7 +6,7 @@
     {% for post in site.tags.block_01 %}
       { 
         "kop":          "{{ post.kop }}",
-        "foto_bestand": "{{ post.foto_bestand }}",
+        "foto_bestand": "{{ post.foto_bestand | slice:1, post.foto_bestand.size }}",        
         "foto_alt":     "{{ post.foto_alt }}",
         "url":          "{{ post.url }}",
         "tekst":        "{{ post.content | replace: '"', "'" | strip_newlines }}"    

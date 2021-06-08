@@ -1,3 +1,0 @@
-safari-pinned-tab.png is het 192 icon met afgeronde hoeken,
-hiervan heb ik een svg gemaakt met Inkscape
-Dit zou de safari pinned tab kunnen worden

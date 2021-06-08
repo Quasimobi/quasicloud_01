@@ -14,7 +14,7 @@
   "glint_path_json":                "json/",
   "glint_path_css":                 "assets/css/",
   "glint_path_js_glint":            "js_glint/",
-  "glint_path_js_vendor":           "assets/js_vendor/",
-  "glint_github_upload_yes":        true,
+  "glint_path_js_vendor":           "assets/js_vendor_bs4/",
+  "glint_github_upload_yes":        false,
   "glint_github_url_abs":           "https://quasimobi.github.io/quasicloud_01/"
 }

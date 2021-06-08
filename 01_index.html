@@ -1,17 +1,22 @@
 ---
 layout: default_helena_10G_LINK
 permalink: index.html
+config_jumbotron_2001:
+  button_class: "btn-primary btn-lg"
+jumbotron_athena_2001:
+  kop: "Simpel gegevens wijzigen!"
+  tekst: "<p>De inhoud van een deel van de website kan simpel gewijzigd worden. Dit kan met de service NetlifyCms.<br>Gegevens worden daar gewijzigd en deze website toont de wijzigingen.<br>U krijgt uitleg en een handleiding.</p>"
+  knop_tekst: "NetlifyCms"
+  knop_link: "https://www.netlifycms.org/"
 ---
 
 {% comment %}
 <!-- ======================================================================= -->
-<!-- Naam: 01_index.html -->
+
 <!-- ======================================================================= -->
 {% endcomment %}
 
 {% include default/default_helena_20G_var_lite_LINK.html %}
-{% include default/default_helena_01G_content_LINK.html %}
-
 <!-- ===================< NAVBAR >========================================== -->
 <div class="wrapper_navbar_lavinia_99_01">
   <div id="0101_navbar_lavinia">
@@ -20,17 +25,33 @@ permalink: index.html
     {% endif %}
   </div>
 </div>
+
+{% if loc_use_art == true %}  
+{% raw %}
+<script>
+  let pagina_nummer = 1;
+  const json_brand = {
+		"merk_tekst": json_bedrijf.merk_tekst,
+		"merk_link":  json_bedrijf.merk_link
+  };  
+  const config_navbar_01 =  {
+    "navbar_class": "navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+  };  
+  let sanitize_tpl = true;
+  let snip_brand_0101 = snip_navbar_lavinia_01G_brand(json_brand, json_configuratie);    
+  let snip_links_0101 = snip_navbar_lavinia_01G_links(pagina_nummer, json_navbar_lavinia_01.links, json_configuratie);
+  let render_navbar_0101 = render_navbar_lavinia_01G(snip_brand_0101, snip_links_0101, config_navbar_01);
+  render_template_01("0101_navbar_lavinia", render_navbar_0101, sanitize_tpl);
+</script>
+{% endraw %}
+{% endif %}
 <!-- =======< TEMPLATE >==================================================== -->
 <section class="section_quasicloud_99_01">
   <div class="container">
     <div class="row">
       <div class="col-always-12B">
-        <div class="wrapper_jumbotron_athenxxxa_01_01">
-          <div id="0101_jumbotron_athena">
-            {% if loc_use_art == false %}                
-              {% include render/0101_jumbotron_athena.html %}
-            {% endif %}          
-          </div>
+        <div class="wrapper_jumbotron_athena_20_01">
+          {% include jumbotron_athena_20G.html content=page.jumbotron_athena_2001 config=page.config_jumbotron_2001 %}          
         </div>
       </div>
     </div>

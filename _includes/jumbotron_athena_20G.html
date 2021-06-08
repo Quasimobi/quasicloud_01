@@ -1,13 +1,22 @@
 {% comment %}
 <!-- ======================================================================= -->
+<!-- gesynchroniseerd -->
+ btn-primary btn-lg
 <!-- ======================================================================= -->
 {% endcomment %}
 
-{% include default/default_helena_01G_vendor.html %}
-
-{% include default/netlify_cloud_body_01JS.html %}
+<!-- include_jumbotron_athena_20G 0.1.0 -->
+<div class="jumbotron_athena_20G">
+  <h1>{{ include.content.kop }}</h1>
+    {{ include.content.tekst }}
+  <p>
+    <a class="btn {{ include.config.button_class }}" href="{{ include.content.knop_link }}" role="button">{{ include.content.knop_tekst }}</a>
+  </p>
+</div>
 
 {% comment %}
 <!-- ======================================================================= -->
 <!-- ======================================================================= -->
 {% endcomment %}
+
+

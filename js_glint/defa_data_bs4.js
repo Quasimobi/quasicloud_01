@@ -105,5 +105,10 @@ var full_github_path_abs_media = json_configuratie.glint_github_url_abs+json_con
  */
 var full_github_path_abs_media_upload = json_configuratie.glint_github_url_abs+json_configuratie.glint_path_bedrijf_media_upload;
 /* ========================================================================== */
+var pwa_install_explainer = `XYYYXXThis app can be installed on your PC or mobile device. 
+This will allow this web app to look and behave like any other installed app.
+You will find it in your app lists and be able to pin it to your home screen, start menus or task bars.
+This installed web app will also be able to safely interact with other apps and your operating system.`
+/* ========================================================================== */
 /* ========================================================================== */
 

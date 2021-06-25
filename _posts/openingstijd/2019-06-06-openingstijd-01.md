@@ -1,5 +1,5 @@
 ---
 tags: openingstijd
-vakantie_tijd: true
+vakantie_tijd: false
 published: true
 ---
